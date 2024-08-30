@@ -1,0 +1,14 @@
+{
+  "name": "clase6",
+  "version": "1.0.0",
+  "description": "Probando la creacion de un proyecto con NPM entry point: (index.js)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "npm", "test", "node"
+  ],
+  "author": "Mailen Monney",
+  "license": "ISC"
+}

@@ -1,11 +1,11 @@
 {
   "name": "clase6",
   "version": "1.0.0",
-  "description": "Probando la creacion de un proyecto con NPM entry point: (main.js)",
-  "main": "main.js",
+  "description": "Probando la creacion de un proyecto con NPM entry point: (index.js)",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node main.js"
+    "start": "node index.js"
   },
   "keywords": [
     "npm",

@@ -15,6 +15,7 @@
   "author": "Mailen Monney",
   "license": "ISC",
   "dependencies": {
-    "chalk": "^4.1.2"
+    "chalk": "^4.1.2",
+    "express": "^4.19.2"
   }
 }

@@ -35,4 +35,5 @@ class ProductManger{
     }
 }
 
+    //exporta la clase
 module.exports = ProductManger;

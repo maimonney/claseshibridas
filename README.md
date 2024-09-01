@@ -3,7 +3,7 @@
 ## Alumnas:
 
 ```
-- Ayala Daiana
+- Ayala Daiana Amanda Ortiz
 - Monney Mailen
 ```
 
@@ -12,8 +12,12 @@
 ```
 (El profe utiliza la terminal Git Bash)
 
-    - $ node nombre.js --> para ejecutar un archivo JavaScript en Node.js
-    - Con this se referencia el atributo propio de la clase
+    - node nombre.js --> para ejecutar un archivo JavaScript en Node.js
+    - Con this se referencia el atributo propio de la clase.
+    - Usamos module.export = nombreClase para exportar valores, funciones, objetos o clases que queremos hacer disponibles a otros modulos.
+    - Se importan usando require('./nombreClase.js').
+    - Modulo FileSystem, este proporciona funciones y métodos para trabajar con el sistema de archivos del sistema operativo.
+    - Modulo OS, Operative System, nos permie ejecutar acciones de más bajo nivel en nuestro sistema, permitiendonos conocer varios detalles del soistema. 
 ```
 
 ## Como iniciar un repositorio

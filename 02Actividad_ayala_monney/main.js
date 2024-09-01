@@ -1,4 +1,3 @@
-//Actividad 02
 const ProductManager = require('./ProductManager.js');
 const products = [
     {  title : 'Labial',
@@ -24,14 +23,14 @@ const p1 = {
     descripcion : 'Hola',
     price : 2222,
     imagen : 'img.png',
-    id : 3,
+    id : 1,
     stock : 14 
 }
 
 const p2 = {
     title : 'Rubor',
     price : 2222,
-    id : 4,
+    id : 1,
     stock : 14 
 }
 
@@ -42,5 +41,3 @@ manager.addProduct(p2)
 console.log(manager)
 const productoXID = manager.getProductById(5)
 console.log(productoXID)
-
-module.exports = manager;

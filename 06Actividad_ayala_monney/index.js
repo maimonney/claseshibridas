@@ -1,6 +1,7 @@
 const chalk = require('chalk');
 const express = require('express');
 const ProductManager = require('./main.js');
+const manager = require('./main.js');
 
 const app = express();
 const port = 3000;
@@ -15,8 +16,10 @@ app.get('/', (request, response) => {
 
 //Ruta productos (Get)
 app.get('/products', (request, response) => {
-    const product = ProductManager;
-    response.send(product);
+    const productos = manager.getProducts(); 
+    //const product = ProductManager;
+    console.log('PRODUCTOS ', productos);
+    response.send(productos);
     console.log('Accedio a la ruta /products');
 });
 
@@ -32,11 +35,15 @@ app.post('/products', (request, response) => {
     }
 });
 
-
 const findById = (request, response) => {
-    const id = request.params.id;
-    response.send(`Accedio a la ruta /products/${id}`);
-    console.log(`Accedio a la ruta /products/${id}`);
+    if(manager.id){
+    const id = parseInt( request.params.id) ;
+    const producto = manager.getProductById(id) 
+    response.send(producto);
+    console.log(`Accedio a la ruta /products/${id}`, producto);
+} else{
+    response.status(400).json({mensaje: `Producto con ${id} no encontrado`})
+}
 };
 
 app.get('/products/:id', findById);

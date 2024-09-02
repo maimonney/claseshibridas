@@ -38,8 +38,8 @@ const p2 = {
 
 manager.addProduct(p1) 
 manager.addProduct(p2) 
-console.log(manager)
-const productoXID = manager.getProductById(5)
-console.log(productoXID)
+//console.log(manager)
+//const productoXID = manager.getProductById(5)
+//console.log(productoXID)
 
 module.exports = manager;

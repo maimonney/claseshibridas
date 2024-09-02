@@ -16,13 +16,34 @@
     - Con this se referencia el atributo propio de la clase.
     - Usamos module.export = nombreClase para exportar valores, funciones, objetos o clases que queremos hacer disponibles a otros modulos.
     - Se importan usando require('./nombreClase.js').
+
     - Modulo FileSystem, este proporciona funciones y métodos para trabajar con el sistema de archivos del sistema operativo.
+
     - Modulo OS, Operative System, nos permie ejecutar acciones de más bajo nivel en nuestro sistema, permitiendonos conocer varios detalles del soistema. 
+
+    - chalk -> Es una librería para estilizar la salida de texto en la consola con colores, fondos y otros estilos.
+
+    - express -> Es un framework de Node.js para construir aplicaciones web y APIs.
+
+    - Rutas -> determinar cómo una aplicación responde a una solicitud de cliente:
+        ▶ app es la instancia de express.
+        ▶ METHOD es un método de solicitud HTTP.
+        ▶ PATH: Es una ruta en el servidor.
+        ▶ HANDLER: Es la función ejecutada cuando la ruta coincide.
+
+    - app.use(express.json()) -> Este middleware permite a la aplicación Express parsear las solicitudes con cuerpo en formato JSON.
+    - request -> representa la solicitud del cliente.
+    - response -> representa la respuesta que se enviará al cliente.
     - req.params recibimos parametros en nuestra ruta, es un objeto que continen propieades
-    - app.post -> es para agregar
-    - app.put -> es para actualizar
-    - app.delete -> es para eliminar
-    - express.json() -> especifica que trabaja con json
+
+    # Métodos HTTP en Express:
+        ▶ app.get -> es para obtener.
+        ▶ app.post -> es para agregar.
+        ▶ app.put -> es para actualizar.
+        ▶ app.delete -> es para eliminar.
+
+    - app.listen -> es para iniciar el servidor y hacer que la aplicación comience a escuchar solicitudes en un puerto específico.
+    - express.json() -> especifica que trabaja con json.
 ```
 
 ## Como iniciar un repositorio
@@ -62,4 +83,7 @@
     - git add .
     - git commit -m "Agregar comentario"
     -git push 
+
+4. Para obtener los últimos cambios del repositorio
+    - git pull
 ```

@@ -18,6 +18,11 @@
     - Se importan usando require('./nombreClase.js').
     - Modulo FileSystem, este proporciona funciones y métodos para trabajar con el sistema de archivos del sistema operativo.
     - Modulo OS, Operative System, nos permie ejecutar acciones de más bajo nivel en nuestro sistema, permitiendonos conocer varios detalles del soistema. 
+    - req.params recibimos parametros en nuestra ruta, es un objeto que continen propieades
+    - app.post -> es para agregar
+    - app.put -> es para actualizar
+    - app.delete -> es para eliminar
+    - express.json() -> especifica que trabaja con json
 ```
 
 ## Como iniciar un repositorio

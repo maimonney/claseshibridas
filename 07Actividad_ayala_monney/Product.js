@@ -13,16 +13,17 @@ class Product {
         const data = await fs.readFile(this.path, 'utf-8');
         const array = JSON.parse(data);
         array.push({
-            id: id,
             title: title,
             descripcion: descripcion,
             price: price,
             imagen: imagen,
+            id: id,
             stock: stock
         });
         const dataStr = JSON.stringify(array, null, 2);
         await fs.writeFile(this.path, dataStr, 'utf-8');
     }
+    
     async getProducts() {
         const data = await fs.readFile(this.path, 'utf-8');
         return JSON.parse(data);
@@ -31,8 +32,16 @@ class Product {
     async getProductById(id) {
         const data = await fs.readFile(this.path, 'utf-8');
         const array = JSON.parse(data);
-        return array.find(product => product.id === id);
+    
+        const numericId = Number(id); 
+        const product = array.find(product => product.id === numericId);
+    
+        console.log('Producto encontrado:', product);
+    
+        return product;
     }
+    
+    
 }
 
 

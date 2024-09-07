@@ -4,7 +4,7 @@ const app = express();
 const port = 3000;
 app.use( express.json());
 
-// Abro desde el navegaro http://127.0.0.1:3000/
+// Abro desde el navegador http://127.0.0.1:3000/
 
 // Rutas
 app.get('/', (req, res) => {
@@ -19,34 +19,38 @@ app.get('/products', async (req, res) => {
     console.table(data);
     res.status(200).send(data);
 })
+
 // Retorna el usuario por id
-app.get('/products/:id', async ( req, res) => {
+app.get('/products/:id', async (req, res) => {
     const id = req.params.id;
     const product = new Product();
     const data = await product.getProductById(id);
-    if( data ){
-        res.status(200).json(data)
+
+    if (data) {
+        res.status(200).json(data);
     } else {
-        res.status(404).json({ mensaje: 'Producto no econtrado'})
+        res.status(404).json({ mensaje: 'Producto no encontrado' });
     }
-})
+});
+
 
 // Guarda un usuario
 app.post('/products', async( req, res) => {
     console.log( req.body );
     const { title, descripcion, price, imagen, stock } = req.body;
-    if( !title || !descripcion || !price || !imagen || !stock ){
-        res.status(400).json({ mensaje: 'Faltan parametros'})
+    try {
+        const product = new Product();
+        await product.addProduct({
+            title,
+            descripcion,
+            price,
+            imagen,
+            stock
+        });
+        res.status(202).json({ mensaje: 'Producto guardado' }); 
+    } catch (error) {
+        res.status(500).json({ mensaje: 'Error al guardar el producto' }); 
     }
-    const product = new Product();
-    await product.addProduct({
-        title,
-        descripcion,
-        price,
-        imagen,
-        stock
-    })
-    res.status(202).json({ mensaje: 'Usuario Guardado'})
 })
 
 

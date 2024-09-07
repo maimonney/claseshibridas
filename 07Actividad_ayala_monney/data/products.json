@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Labial",
+    "descripcion": "Labial oil",
+    "price": 20000,
+    "imagen": "img.png",
+    "id": 1,
+    "stock": 14
+  },
+  {
+    "title": "Eyerliner",
+    "descripcion": "Eyeliner para ojos",
+    "price": 23400,
+    "imagen": "img.png",
+    "id": 2,
+    "stock": 0
+  }
+]

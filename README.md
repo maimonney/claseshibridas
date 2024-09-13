@@ -44,6 +44,17 @@
 
     - app.listen -> es para iniciar el servidor y hacer que la aplicación comience a escuchar solicitudes en un puerto específico.
     - express.json() -> especifica que trabaja con json.
+
+    # Model - View - Controlador
+    ▶ Model: representa los datos logicos, se encarga de la interaccion con la base de datos y la validacion.
+    ▶ View: presenta los datos al usuario
+    ▶ Controller: controla la comunicacion entre el modelo y la vista
+
+    # Variables de entorno
+    Se usan para guardar valores que no queremos exponer en nuestro código directamente. Permite que la app sea más segura.
+    Se puede gestionar por medio de un archivo .env el cual lo agregamos en el .gitignore
+    ▶ Se instala: npm install dotenv
+    Luego podemos acceder a la variables por medio de process.env.variable
 ```
 
 ## Como iniciar un repositorio

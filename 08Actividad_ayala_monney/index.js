@@ -1,4 +1,6 @@
 const express = require('express');
+// Abro desde el navegador http://127.0.0.1:3000/
+
 
 // Importamos el módulo dotenv
 require('dotenv').config();

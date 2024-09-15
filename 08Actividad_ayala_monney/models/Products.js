@@ -41,8 +41,16 @@ class Product {
         return product;
     }
     
+    async updateProduct(id, updatedProduct) {
+        const data = await fs.readFile(this.path, 'utf-8');
+        const array = JSON.parse(data);
+        const index = array.findIndex(product => product.id === id);
     
-}
+        if (index !== -1) {
+            array[index] = { ...array[index], ...updatedProduct };
+            await fs.writeFile(this.path, JSON.stringify(array, null, 2), 'utf-8');
+        }
+}}
 
 
 module.exports = { Product }

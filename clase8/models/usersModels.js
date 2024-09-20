@@ -4,18 +4,10 @@ const Schema = mongoose.Schema;
 
 //Creo el esquema
 const mySchema = new Schema({
-    nombre:{
-        type:String,
-        required: true  
-    },
-    email:{
-        type:String,
-        required: true
-    },
-    contraseña:{
-        type:String,
-        required: true  
-    }
+        name:String,
+        email:String,
+        password:String
+
 }); 
 
 

@@ -5,7 +5,7 @@ require('dotenv').config();
 
 
 // accedemos a la variable de Entorno
-const port = process.env.PORT;
+const port =  process.env.PORT;
 
 // Conectamos a la db
 mongoose.connect('mongodb://127.0.0.1:27017/app');

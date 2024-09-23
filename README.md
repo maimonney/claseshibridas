@@ -57,6 +57,9 @@
     Luego podemos acceder a la variables por medio de process.env.variable
 ```
 
+// Abro desde el navegador http://127.0.0.1:3000/
+
+
 ## Como iniciar un repositorio
 
 ```

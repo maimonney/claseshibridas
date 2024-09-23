@@ -18,3 +18,8 @@ header, footer{
     justify-content: center;
     align-items: center;
 }
+
+.logo{
+    width: 50px;
+    height: auto;
+}

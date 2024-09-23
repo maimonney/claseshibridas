@@ -1,0 +1,20 @@
+
+
+header{
+    height: 20vh;
+    flex-direction: column;
+}
+
+main{
+    min-height: 80vh;
+}
+
+footer{
+    height: 10vh;
+}
+
+header, footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

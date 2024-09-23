@@ -20,6 +20,7 @@ db.once('open', ()=>{
 const app = express();
 // Ruta Raíz
 app.use( express.json());
+app.use(express.static('public'));
 
 app.use(  (req, res, next) => {
     console.log('Soy el middleware');

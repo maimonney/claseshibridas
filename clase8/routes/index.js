@@ -3,7 +3,7 @@ const userRouter = require('./userRouter');
 
 function routerAPI(app){
     // Definimos los endPoint
-    app.use('/users', userRouter);
+    app.use('/api/users', userRouter);
 }
 
 module.exports = routerAPI;

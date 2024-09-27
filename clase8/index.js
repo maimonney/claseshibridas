@@ -1,21 +1,11 @@
 const express = require('express');
-const mongoose = require('mongoose');
+const db = require('./config/dataBase');
 const routerAPI = require('./routes');
 require('dotenv').config();
 
 
 // accedemos a la variable de Entorno
 const port =  process.env.PORT;
-
-// Conectamos a la db
-mongoose.connect('mongodb://127.0.0.1:27017/app');
-const db = mongoose.connection;
-
-db.on('error', () => console.error('Error'));
-db.once('open', ()=>{
-    console.log('Conexión correcta');
-})
-
 
 const app = express();
 // Ruta Raíz

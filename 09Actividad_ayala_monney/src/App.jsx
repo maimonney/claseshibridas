@@ -15,10 +15,10 @@ function App() {
     { gato: './img/g3.jfif' }
   ];
 
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [indiceImagenActual, setindIceImagenActual] = useState(0);
 
   const changeImage = (index) => {
-    setCurrentImageIndex(index);
+    setIndiceImagenActual(index);
   };
 
   return (
@@ -32,7 +32,7 @@ function App() {
         <button onClick={() => changeImage(2)}>3</button>
         </div>
         <div className='row'>
-          <Card imgCard={imgs[currentImageIndex].gato} />
+          <Card imgCard={imgs[indiceImagenActual].gato} />
         </div>
       </div>
     </>
